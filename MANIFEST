@@ -3,3 +3,4 @@ Makefile.PL
 SkyCat.pm
 SkyCat.xs
 typemap
+README
