@@ -7,6 +7,25 @@ Astro::SkyCat - Interface to the ESO SkyCat library
 =head1 SYNOPSIS
 
 
+  use Astro::SkyCat;
+
+  $cat = Astro::SkyCat->Open("gsc\@eso");
+
+  $q = new Astro::SkyCat::Query();
+  $q->width(2.0);
+  $q->height(3.5);
+
+  $pos = new Astro::SkyCat::WorldCoords(3,19,48,41,30,39);
+  $q->pos( $pos );
+
+  $qr = new Astro::SkyCat::QueryResult();
+  $nrows = $cat->query($q, "/tmp/file", $qr);
+
+  foreach ($cat->colNames() ) {
+    print "Column: $_  Value: ", $qr->get(1,$_), "\n";
+  }
+
+
 
 =head1 DESCRIPTION
 
@@ -22,16 +41,10 @@ require DynaLoader;
 
 use strict;
 use Carp;
-use vars qw(@ISA $VERSION %EXPORT_TAGS);
+use vars qw(@ISA $VERSION );
 
 @ISA = qw/ DynaLoader /;
 $VERSION = "0.01";
-
-%EXPORT_TAGS = ( 'all' => [qw/
-
-			   /]);
-
-Exporter::export_tags("all");
 
 bootstrap Astro::SkyCat;
 
