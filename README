@@ -18,8 +18,6 @@ Requirements
 - This module uses the C++ interface to CatLib so you will need
   a C++ compiler
 
-Requires the catlib library (available from 
-
 Building
 --------
 
@@ -55,6 +53,9 @@ of the Joint Astronomy Centre.
 Copyright (C) 2001 Tim Jenness.  All rights reserved.  This program is
 free software; you can redistribute it and/or modify it under the same
 terms as Perl itself.
+
+The SkyCat library itself was written by Allan Brighton <abrighto@eso.org>
+and is copyrighted European Southern Observatory.
 
 Changes
 -------
