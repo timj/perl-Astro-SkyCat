@@ -8,7 +8,7 @@ WriteMakefile(
 	      'CC' => 'g++',
 	      'LD' => 'g++',
 	      'LIBS'      => [
-			      "-L${CAT_DIR}/cat/astrocat/lib -lastrocat -L${CAT_DIR}/tclutil/util/lib -lutil -L${CAT_DIR}/astrotcl/wcslib/lib -lwcslib",
+			      "-L${CAT_DIR}/cat/astrocat/lib -lastrocat -L${CAT_DIR}/tclutil/util/lib -lutil -L${CAT_DIR}/astrotcl/wcslib/lib -lwcslib -L${CAT_DIR}/astrotcl/compress/lib -lcompress",
 			     ],
               'PREREQ_PM' => {
 			      'Test' => undef,
